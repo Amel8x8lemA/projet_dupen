@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC27A"
+    tools:context=".GameplayActivity">
+
+    <TextView
+        android:id="@+id/mysteryWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hidden_word"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/home_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_icon" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/letterA"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/a"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/letterB"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/b"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterC"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/c"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterD"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/d"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterE"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/e"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterF"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/f"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterG"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/g"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/letterH"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/h"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterI"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/i"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterJ"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/j"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterK"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/k"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterL"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/l"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterM"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/m"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/n"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/letterO"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/o"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterP"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/p"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterQ"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/q"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterR"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/r"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterS"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/s"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterT"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/t"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterU"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/u"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="51.4dp"
+            android:layout_marginRight="51.4dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/letterV"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/v"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterW"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/w"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterX"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/x"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterY"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/y"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+            <Button
+                android:id="@+id/letterZ"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2F2F2F"
+                android:onClick="displayGuessLetter"
+                android:padding="0dp"
+                android:text="@string/z"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/letterGuess"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="16"
+        android:text="@string/guess_letter"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mysteryWord" />
+
+    <ImageButton
+        android:id="@+id/submit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/submit_button"
+        android:onClick="guess"
+        app:layout_constraintBottom_toBottomOf="@+id/letterGuess"
+        app:layout_constraintStart_toEndOf="@+id/letterGuess"
+        app:layout_constraintTop_toTopOf="@+id/letterGuess"
+        app:srcCompat="@drawable/submit" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homeButton"
+        app:srcCompat="@drawable/error_count" />
+
+    <TextView
+        android:id="@+id/errorCounter"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"/>
+
+    <ImageView
+        android:id="@+id/imagePendu"
+        android:layout_width="390dp"
+        android:layout_height="292dp"
+        app:layout_constraintBottom_toTopOf="@+id/mysteryWord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeButton"
+        app:srcCompat="@drawable/pendu_etape0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
